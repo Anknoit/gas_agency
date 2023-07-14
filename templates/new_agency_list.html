@@ -1,0 +1,164 @@
+{% extends 'base_dashboard.html' %}
+<!-- REGISTER NEW Clients -->
+
+{% block content %}
+<h1 style="margin-left: 250px;">AGENCY LIST</h1>
+<div style="margin-left: 17%;">
+    <div class="m-3">
+        <p class="h3">Register New Agency</p>
+        <p class="lead">
+            Registering the Customer will generate new customer ID which will be used for future reference.
+            Ex. [R1234]
+        </p>
+
+        <form class="row g-3">
+            <!-- Insert image upload here-->
+            <div class="col-md-6">
+                <label for="reg_name" class="form-label">Agency Name</label>
+                <input type="test" class="form-control" id="reg_name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="reg_mobile" class="form-label">Owner Name</label>
+                <input type="text" class="form-control" id="reg_mobile" required>
+            </div>
+            <div class="col-md-6">
+                <label for="reg_mobile" class="form-label">Mobile Number</label>
+                <input type="text" class="form-control" id="reg_mobile" required>
+            </div>
+            <hr>
+            <div class="col-12">
+                <label for="inputAddress1" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress1" required placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" required>
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Choose...</option>
+
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam </option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                </select>
+            </div>
+            <!-- <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div> -->
+            <div class="col-md-4">
+                <label for="gender" class="form-label">Gender</label>
+                <select id="gender" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="age" class="form-label">Age</label>
+                <input type="text" class="form-control" id="age" required>
+            </div>
+            <div class="col-md-6">
+                <label for="adhaarNum" class="form-label">Adhaar Number</label>
+                <input type="text" class="form-control" id="adhaarNum" required>
+            </div>
+
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Send ID to Customer Email
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Send ID to Customer WhatsApp
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </form>
+
+
+
+
+
+
+
+
+
+
+        <!-- AGENCY REGISTRATION WINDOW -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Registered Agency</h5>
+                        <hr>
+                        <div class="mb-3">
+                            <label for="customer_ID" class="form-label">Customer ID</label>
+                            <input type="text" class="form-control" id="customer_ID" placeholder="Ex.R123456">
+                        </div>
+                        <h5>OR</h5>
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control" id="customerName" placeholder="name@example.com">
+                        </div>
+                        <a href="#" class="btn btn-primary">Submit</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Registered Customer</h5>
+                        <hr>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

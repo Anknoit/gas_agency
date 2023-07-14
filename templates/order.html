@@ -1,0 +1,56 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+
+{% block content %}
+<h1 style="margin-left: 250px;">ORDER LIST</h1>
+
+<div style="margin-left: 17%;" class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">New Order</h5>
+                <hr>
+                <form action="/new_order" method="POST">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="customer_ID" class="form-label">Customer ID</label>
+                        <input type="text" class="form-control" id="customer_ID" placeholder="Ex.R123456"
+                            name="customer_id">
+                    </div>
+                    <div class="mb-3">
+                        <label for="customer_name" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="customer_name"
+                            placeholder="Self Generate from customer ID" name="customer_name" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cylinder_type" class="form-label">Cylinder Type</label>
+                        <input type="text" class="form-control" id="customer_ID" placeholder="Cylinder Type"
+                            name="cylinder_type">
+                    </div>
+                    <button class="btn btn-success" type="submit">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Order History</h5>
+                <hr>
+                <div class="mb-3">
+                    <label for="customer_ID" class="form-label">Customer ID</label>
+                    <input type="text" class="form-control" id="customer_ID" placeholder="Ex.R123456">
+                </div>
+                <h5>OR</h5>
+                <div class="mb-3">
+                    <label for="customerName" class="form-label">Customer Name</label>
+                    <input type="text" class="form-control" id="customerName" placeholder="name@example.com">
+                </div>
+                <a href="#" class="btn btn-primary">Submit</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
